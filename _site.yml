@@ -8,5 +8,5 @@ navbar:
     - text: "Resume"     
       href: resume.html  
 output:
-  prettydoc::html_pretty:
-    theme: cayman
+  html_document:
+    theme: lumen
