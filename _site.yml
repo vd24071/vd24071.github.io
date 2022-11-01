@@ -1,0 +1,12 @@
+name: "Vanessa Dinh"
+output_dir: "."
+navbar:
+  title: "Vanessa Dinh"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Resume"     
+      href: resume.html  
+output:
+  prettydoc::html_pretty:
+    theme: cayman
