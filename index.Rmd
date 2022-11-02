@@ -1,5 +1,13 @@
 ---
-title: "Vanessa Dinh"
+title: "Home"
 ---
 
-# Main Page
+# About Me
+
+My name is Vanessa Dinh and this website describes a little bit about me! Check the navigation bar above for my resume, email address, github account, and linkedin.
+
+<img src="/pictures/20220310_165014.jpg" style="width:75%">
+
+I'm a second year MPH candidate in Epidemiology at Columbia Mailman School of Public Health with a certificate in Applied Biostatistics and Public Health Data Science.
+
+I enjoy playing soccer in co-ed leagues, traveling, snow sports, and eating good (reasonably priced) food!

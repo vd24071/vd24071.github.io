@@ -3,3 +3,71 @@ title: "Resume"
 ---
 
 ## Education and Professional Experience
+
+### **EDUCATION**
+
+**MPH Epidemiology, Certificate in Applied Biostatistics and Public Health Data Science** September 2021 - Present
+
+- Columbia University Mailman School of Public Health, New York City, NY
+
+- Cumulative GPA: 4.1 
+
+**BS Microbiology, Minor in Food and the Environment** September 2016 - April 2020	
+
+University of Michigan – Ann Arbor, College of Literature, Science, and the Arts, Ann Arbor, MI
+
+- Cumulative GPA: 3.7
+
+- Major GPA: 3.6
+
+- University Honors: Apr 20, Dec 19, Apr 18, Apr & Dec 17, Dec 16
+
+### **PROFESSIONAL EXPERIENCE**
+
+**Department of Epidemiology – Columbia Mailman School of Public Health, New York City, NY**	May 2022 – Present
+
+Research Assistant
+
+- Recruited research participants from RecruitMe
+
+- Collected and managed data using various medical devices related to rest-activity rhythms and blood pressure
+
+- Collaborated with co-authors to create AHA Life’s Essential 8 scores and participated in data cleaning and creating the analytic dataset used for epidemiological research
+*Conducted survival analysis using NHANES interview and mobile examination data and NCHS mortality data
+
+**Partnership Solutions, New York, NY (Remote)** June – August 2022
+
+Healthcare Management Team Intern
+
+- Created a survey to disperse among PS care managers of individuals with intellectual and/or developmental disabilities to ascertain barriers to medication adherence
+
+**American Red Cross – Together We Prepare/Disaster Action Team, Detroit/Ann Arbor, MI** June – August 2021
+
+Disaster Cycle Services Associate - AmeriCorps Member	
+
+- Led disaster preparedness education for elementary and middle school aged children
+
+- Responded to over 100 disaster-related emergencies on an on-call basis as a Disaster Action Team member
+
+- Installed smoke alarms and educated residents about home fire safety
+
+**NSF International, Ann Arbor, MI** August 2020 – February 2021
+
+Exposures Laboratory Technician
+
+- Exposed pipes, mechanical devices, and other related products to different pH levels of water to simulate industrial water systems for the overall goal of protecting and improving global human health
+
+- Followed Standard Operating Procedures for product testing exposures under NSF Standards 60 and 61
+
+- Worked as a lab technician team member to coordinate and execute highly efficient product testing schedules 
+
+- Balanced individual responsibilities and priorities in relation to the whole lab to create effective workflow
+
+**Department of Enteric Infections – Oxford University Clinical Research Unit, Ho Chi Minh City, Vietnam** June – August 2019
+
+Internship/Study Abroad: Public Health in Vietnam 
+
+- Isolated clinical samples from patients admitted to the Ho Chi Minh City Hospital for Tropical Diseases to identify bacterial species present using MALDI-TOF mass spectrometry 
+
+- Reviewed research pertaining to the spatial distribution of pharmacies in relation to rates of anti-microbial resistance in the Ho Chi Minh City metropolitan area
+

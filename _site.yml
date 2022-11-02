@@ -7,6 +7,12 @@ navbar:
       href: index.html
     - text: "Resume"     
       href: resume.html  
+    - icon: fa-envelope fa-lg
+      href: mailto:<vd2407@cumc.columbia.edu>
+    - icon: fa-github fa-lg
+      href: http://github.com/vd24071/
+    - icon: fa-brands fa-linkedin
+    - href: https://www.linkedin.com/in/vanessa-d-65b00a127/
 output:
   html_document:
     theme: lumen
