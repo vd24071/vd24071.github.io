@@ -12,7 +12,6 @@ library(tidyverse)
 library(plotly)
 
 library(p8105.datasets)
-library(rnoaa)
 
 data("ny_noaa")
 
@@ -53,42 +52,38 @@ ny_noaa_plot =
   summarize(mean_tmin = mean(tmin, na.rm = TRUE))
 ```
 
-Column {data-width=650}
------------------------------------------------------------------------
+## Column {data-width="650"}
 
 ### Chart A
+
 ```{r}
-jan_plotly =
   ny_noaa_plot %>% 
   filter(month == "January") %>% 
   plot_ly(
     x = ~year, y = ~mean_tmin, type = "box", color = ~year, alpha = 0.5)
 ```
 
-Column {data-width=350}
------------------------------------------------------------------------
+## Column {data-width="350"}
 
 ### Chart B
+
 ```{r}
-tmin_tmax_month_plotly =
   ny_noaa_tidy %>% 
   plot_ly(
     x = ~tmin, y = ~tmax, type = "scatter", mode = "markers", color = ~month, alpha = 0.5)
 ```
 
 ```{r setup3, include = FALSE}
-ny_noaa_snow = 
   ny_noaa_tidy %>% 
   group_by(year, month) %>% 
   filter(month == "December", snow != 0) %>% 
   summarize(mean_snow = mean(snow, na.rm = TRUE))
 ```
+
 ### Chart C
+
 ```{r}
-snowfall_dec_plotly =
   ny_noaa_snow %>% 
   plot_ly(
     x = ~year, y = ~mean_snow, type = "bar", alpha = 0.5)
 ```
-
-
