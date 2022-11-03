@@ -73,17 +73,13 @@ ny_noaa_plot =
     x = ~tmin, y = ~tmax, type = "scatter", mode = "markers", color = ~month, alpha = 0.5)
 ```
 
-```{r setup3, include = FALSE}
-  ny_noaa_tidy %>% 
-  group_by(year, month) %>% 
-  filter(month == "December", snow != 0) %>% 
-  summarize(mean_snow = mean(snow, na.rm = TRUE))
-```
-
 ### Chart C
 
 ```{r}
-  ny_noaa_snow %>% 
+  ny_noaa_tidy %>% 
+  group_by(year, month) %>% 
+  filter(month == "December", snow != 0) %>% 
+  summarize(mean_snow = mean(snow, na.rm = TRUE)) %>% 
   plot_ly(
     x = ~year, y = ~mean_snow, type = "bar", alpha = 0.5)
 ```
