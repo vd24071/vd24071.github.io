@@ -14,7 +14,7 @@ navbar:
     - icon: fa-github fa-lg
       href: http://github.com/vd24071/
     - icon: fa-brands fa-linkedin
-    - href: https://www.linkedin.com/in/vanessa-d-65b00a127/
+      href: https://www.linkedin.com/in/vanessa-d-65b00a127/
 output:
   html_document:
     theme: flatly
