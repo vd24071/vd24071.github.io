@@ -1,0 +1,100 @@
+---
+title: "Flexdashboard Plotly Plots"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup_0.1, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(ggridges)
+library(patchwork)
+library(plotly)
+
+library(p8105.datasets)
+library(rnoaa)
+
+data("ny_noaa")
+
+ny_noaa 
+```
+
+```{r setup1, include = FALSE}
+ny_noaa_tidy = 
+  ny_noaa %>% 
+  sample_n(2000) %>% 
+  janitor::clean_names() %>% 
+  separate(
+    date,
+    into = c("year", "month", "day"),
+    sep = '-') %>% 
+  mutate(
+    year = as.factor(year),
+    month = as.integer(month),
+    month = month.name[month],
+    month = factor(month, levels = month.name),
+    station = as.factor(id),
+    day = as.integer(day),
+    prcp = as.numeric(prcp),
+    snow = as.numeric(snow),
+    snwd = as.numeric(snwd),
+    tmax = as.numeric(tmax),
+    tmin = as.numeric(tmin),
+    prcp = prcp/10,
+    tmax= tmax/10,
+    tmin = tmin/10
+  ) %>% 
+  select(-id)
+```
+
+```{r setup2, include = FALSE}
+ny_noaa_plot = 
+  ny_noaa_tidy %>% 
+  group_by(station, year, month) %>% 
+  summarize(mean_tmin = mean(tmin, na.rm = TRUE))
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+```{r}
+jan_plotly =
+  ny_noaa_plot %>% 
+  filter(month == "January") %>% 
+  plot_ly(
+    x = ~year, y = ~mean_tmin, type = "box", color = ~year, alpha = 0.5)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+```{r}
+tmin_tmax_month_plotly =
+  ny_noaa_tidy %>% 
+  plot_ly(
+    x = ~tmin, y = ~tmax, type = "scatter", mode = "markers", color = ~month, alpha = 0.5)
+```
+
+```{r setup3, include = FALSE}
+ny_noaa_snow = 
+  ny_noaa_tidy %>% 
+  group_by(year, month) %>% 
+  filter(month == "December", snow != 0) %>% 
+  summarize(mean_snow = mean(snow, na.rm = TRUE))
+```
+### Chart C
+```{r}
+snowfall_dec_plotly =
+  ny_noaa_snow %>% 
+  plot_ly(
+    x = ~year, y = ~mean_snow, type = "bar", alpha = 0.5)
+```
+
+```{r setup4, include = FALSE}
+rmarkdown::render("flexdashboard.Rmd", output_format = "flexdashboard::flex_dashboard")
+```
+
