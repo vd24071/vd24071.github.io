@@ -9,8 +9,6 @@ output:
 ```{r setup_0.1, include=FALSE}
 library(flexdashboard)
 library(tidyverse)
-library(ggridges)
-library(patchwork)
 library(plotly)
 
 library(p8105.datasets)
@@ -18,13 +16,12 @@ library(rnoaa)
 
 data("ny_noaa")
 
-ny_noaa 
 ```
 
 ```{r setup1, include = FALSE}
 ny_noaa_tidy = 
   ny_noaa %>% 
-  sample_n(2000) %>% 
+  slice_sample(n=2000) %>% 
   janitor::clean_names() %>% 
   separate(
     date,
@@ -94,7 +91,4 @@ snowfall_dec_plotly =
     x = ~year, y = ~mean_snow, type = "bar", alpha = 0.5)
 ```
 
-```{r setup4, include = FALSE}
-rmarkdown::render("flexdashboard.Rmd", output_format = "flexdashboard::flex_dashboard")
-```
 
