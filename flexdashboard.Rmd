@@ -54,7 +54,7 @@ ny_noaa_plot =
 
 ## Column {data-width="650"}
 
-### Chart A
+### Average Minimum Temperature in January by Year
 
 ```{r}
   ny_noaa_plot %>% 
@@ -65,7 +65,7 @@ ny_noaa_plot =
 
 ## Column {data-width="350"}
 
-### Chart B
+### Minimum and Maximum Temperature by Month
 
 ```{r}
   ny_noaa_tidy %>% 
@@ -73,7 +73,7 @@ ny_noaa_plot =
     x = ~tmin, y = ~tmax, type = "scatter", mode = "markers", color = ~month, alpha = 0.5)
 ```
 
-### Chart C
+### Average Snowfall in December by Year
 
 ```{r}
   ny_noaa_tidy %>% 
